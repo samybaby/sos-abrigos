@@ -55,7 +55,7 @@ function App() {
   async function atualizarAbrigo(e) {
     e.preventDefault();
 
-    await fetch(`http://localhost:3000/api/abrigos/${editandoId}`, {
+    await fetch(`https://sos-abrigos.onrender.com/abrigos${editandoId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
