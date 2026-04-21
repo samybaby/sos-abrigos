@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   async function buscarAbrigos() {
-    const resposta = await fetch("http://localhost:3000/api/abrigos");
+    const resposta = await fetch("https://sos-abrigos.onrender.com/api/abrigos");
     const dados = await resposta.json();
     setAbrigos(dados);
   }
@@ -24,7 +24,7 @@ function App() {
   async function cadastrarAbrigo(e) {
     e.preventDefault();
 
-    await fetch("http://localhost:3000/api/abrigos", {
+    await fetch("https://sos-abrigos.onrender.com/api/abrigos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -37,7 +37,7 @@ function App() {
   }
 
   async function excluirAbrigo(id) {
-    await fetch(`http://localhost:3000/api/abrigos/${id}`, {
+    await fetch(`https://sos-abrigos.onrender.com/api/abrigos/${id}`, {
       method: "DELETE"
     });
 
